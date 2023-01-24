@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Matching Memory Game</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Color Matching Memory Game</title>
+
+        <link rel="stylesheet" href="assets/styles/styles.css">
+	</head>
+	<body>
+        <!-- Section Start Screen -->
+		<section class="view" id="view-start" data-visible="false">
+			<h1>Please select a difficulty</h1>
+
+			<nav>
+				<button id="easy">Easy</button>
+				<button id="medium">Moderate</button>
+				<button id="hard">Difficult</button>
+			</nav>
+		</section>
+        
+        <!-- Section Game Screen -->
+        <section class="view" id="view-game" data-visible="false">
+            <header>
+                <h2>Match as many tiles as fast as you can!</h2>
+                <h4 class="timer">Time elapsed: 0</h4>
+            </header>
+
+            <section class="card-grid">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </section>
+        </section>
+
+        <!-- Section End Modal -->
+        <section class="modal game-over">
+            <h2>Game over! You matched X tiles in Y seconds!</h2>
+            
+            <form>
+                <h3>Please enter your name to save your score.</h3> 
+                <input class="player-input" type="text" placeholder="Your name goes here">
+                <button type="submit">Submit</button>
+            </form>
+
+        </section>
+
+        <!-- Section Rankings Modal -->
+        <section class="modal rankings">
+            <h2>Rankings </h2>
+
+            <table>
+                <tr>
+                    <th>Players</th>
+                    <th>Scores</th>
+                </tr>
+                <tr>
+                    <td>Placeholder</td>
+                    <td>0000</td>
+                </tr>
+            </table>
+
+            <nav>
+                <button>Try Again</button>
+                <button>Change Difficulty</button>
+            </nav>
+        </section>
+
+	</body>
 </html>
